@@ -1,0 +1,10 @@
+Z:\C#\Martin\CSharp-ve-skole\bin\Debug\CSharp-ve-skole.exe
+Z:\C#\Martin\CSharp-ve-skole\bin\Debug\CSharp-ve-skole.pdb
+Z:\C#\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.exe
+Z:\C#\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.pdb
+C:\Users\martin.chyla2\Desktop\C#\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.exe
+C:\Users\martin.chyla2\Desktop\C#\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.pdb
+C:\Users\martin.chyla2\Desktop\C#\Martin\CSharp-ve-skole\bin\Debug\CSharp-ve-skole.exe
+C:\Users\martin.chyla2\Desktop\C#\Martin\CSharp-ve-skole\bin\Debug\CSharp-ve-skole.pdb
+C:\Users\martin.chyla2\Desktop\C#\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.exe
+C:\Users\martin.chyla2\Desktop\C#\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.pdb
