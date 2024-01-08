@@ -48,6 +48,7 @@
     <Compile Include="Main\Metody.cs" />
     <Compile Include="Main\Opakovani.cs" />
     <Compile Include="Main\Podminky.cs" />
+    <Compile Include="Main\Pole.cs" />
     <Compile Include="Main\UvodC.cs" />
     <Compile Include="Main\Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
