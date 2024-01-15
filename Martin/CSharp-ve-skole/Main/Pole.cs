@@ -70,5 +70,34 @@ namespace CSharp_ve_skole
             Console.ReadLine();
         }
 
+
+        public static void NaceteniNahodnychCiselPole()
+        { 
+            int dolniHranice = -10000;
+            int horniHranice = 10000;
+
+            Console.WriteLine("Zadej počet generovaných čísel: ");
+            int pocet = int.Parse(Console.ReadLine());
+            int[] Pole = new int[pocet]; //deklarace pole
+            Random generovaniCisla = new Random();
+
+            for (int i = 0; i < Pole.Length; i++)
+                Pole[i] = generovaniCisla.Next(dolniHranice, horniHranice + 1);
+
+            foreach (int cislo in Pole)
+                Console.WriteLine(cislo);
+
+            Console.WriteLine("Maximální hodnota je {0}", Pole.Max());
+            Console.WriteLine("Minimální hodnota je {0}", Pole.Min());
+            Console.WriteLine("Průměrná hodnota je {0}", Pole.Average());
+            
+            // Program zobrazí nadprůměrné hodnoty
+
+
+
+            Console.ReadLine();
+        }
+
+
     }
 }
