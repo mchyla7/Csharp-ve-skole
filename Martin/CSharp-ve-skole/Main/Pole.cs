@@ -211,6 +211,13 @@ namespace CSharp_ve_skole
             Console.WriteLine("Minimální hodnota je {0}", Pole.Min());
             Console.WriteLine("Průměrná hodnota je {0}", Pole.Average());
             Console.ReadLine();
+
+            //  Seřazené pole
+
+            Array.Sort(Pole);
+            Console.WriteLine("\n\nSeřazené pole vzestupně");
+            foreach (int i in Pole)
+            Console.WriteLine(i);
         }
     }
 }
