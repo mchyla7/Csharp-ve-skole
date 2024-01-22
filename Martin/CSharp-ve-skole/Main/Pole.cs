@@ -98,6 +98,47 @@ namespace CSharp_ve_skole
             Console.ReadLine();
         }
 
+        // Program generuje n čísel v intervalu(-100,100)
+        // Na n se program zeptá
+        // Záporné hodnoty program uloží do pole1 a kladné do pole2
+        // Poté program nejprve vypíše hodnoty z pole1 a potom z pole2
+
+        public static void MinusStoAzPlusSto()
+        {
+            Random Random = new Random();
+            Console.WriteLine("Zadej počet generovaných čísel: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] Pole1 = new int[n];
+            int[] Pole2 = new int[n];
+            int ik = 0;
+            int iz = 0;
+
+            for (int i = 0; i <= n; i++)
+            {
+                int cislo = Random.Next(-100, 100);
+                if (cislo > 0)
+                {
+                    Pole1[ik] = cislo;
+                    ik++;
+                }
+                if (cislo < 0)
+                {
+                    Pole1[iz] = cislo;
+                    iz++;
+                }
+            }
+
+            Console.WriteLine("Kladné hodnoty");
+            for (int i = 0; i <= ik-1; i++)
+                Console.Write(Pole1[i] + ";");
+
+            Console.WriteLine("\n\nZáporné hodnoty");
+            for (int i = 0; i <= iz-1; i++)
+                Console.Write(Pole2[i] + ";");
+
+            Console.ReadLine();
+        }
+
 
     }
 }
