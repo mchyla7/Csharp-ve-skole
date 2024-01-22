@@ -33,7 +33,7 @@ namespace CSharp_ve_skole
                 Console.WriteLine(cislo);
         }
 
-        // Vytvořenáí a naplnění pole hodnotami z kodu
+        // Vytvoření a naplnění pole hodnotami z kodu
 
         public static void PoleSVlastnimSeznamem()
         {
@@ -138,7 +138,79 @@ namespace CSharp_ve_skole
 
             Console.ReadLine();
         }
+        
+        // Program se zeptá na číslo dne v týdnu, následně zobrazí jeho název
+        // Načítání bude ukončeno, pokud zadáte nečíselnou hodnotu
 
+        public static void DnyVTydnu()
+        {
+            string[] dnyPole = { "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota", "Neděle" };
+            while (true)
+            { 
+            Console.WriteLine("Zadej den v týdnu: ");
 
+            int cisloDne = 0;
+            if(!int.TryParse(Console.ReadLine(),out cisloDne)) break;
+            if (cisloDne > 0 && cisloDne > 8) Console.WriteLine(dnyPole[cisloDne - 1 ]);
+
+            Console.WriteLine("Číslo musí být 1-7");
+            }
+
+        }
+
+        // Program se zeptá na číslo měsíce v roce, následně zobrazí jeho název
+        // Načítání bude ukončeno, pokud zadáte nečíselnou hodnotu
+
+        public static void MesiceVRoce()
+        {
+            string[] MesicePole = { "Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"};
+            while (true)
+            {
+                Console.WriteLine("Zadej měsíc v roce: ");
+
+                int cisloMesice = 0;
+                if (!int.TryParse(Console.ReadLine(), out cisloMesice)) break;
+                if (cisloMesice > 0 && cisloMesice > 13) Console.WriteLine(MesicePole[cisloMesice - 1]);
+
+                Console.WriteLine("Číslo musí být 1-12");
+            }
+
+        }
+
+        // Program náhodně vygeneruje den a měsíc v jakémkoliv počtu
+
+        public static void MesicADen()
+        {
+            string[] MesicePole = { "Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec" };
+            string[] dnyPole = { "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota", "Neděle" };
+
+            Random random = new Random();
+
+            for (int i = 0; i < 10; i++)
+                Console.WriteLine(dnyPole[random.Next(6)] + " " + MesicePole[random.Next(11)]);
+                Console.ReadLine();
+        }
+
+        // Program se zeptá na hodnotu N = počet hodnot
+        // Program vyheneruje N čísel do pole, následně je vypíše a zobrazí
+        // dále zobrazí průměrnou a minimální hodnotu
+
+        public static void HodnotaN()
+        {
+            Random random = new Random();
+            Console.WriteLine("Zadej počet generovaných čísel: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] Pole = new int[n];
+
+            for (int i = 0; i < n; i++)
+                Pole[i] = random.Next();
+
+            foreach (int i in Pole)
+            Console.WriteLine(i);
+
+            Console.WriteLine("Minimální hodnota je {0}", Pole.Min());
+            Console.WriteLine("Průměrná hodnota je {0}", Pole.Average());
+            Console.ReadLine();
+        }
     }
 }
