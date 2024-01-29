@@ -365,5 +365,82 @@ namespace CSharp_ve_skole
             }
         }
 
+        // Kopírování pole
+
+        public static void Kopirka()
+        {
+            string[] dny = {"Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota","Neděle"};
+            string[] Vsednidny = new string[5];
+
+            // Array.Copy(zdrojové pole, pole kam kopírujeme, kolik hodnot kopírujeme)
+            Array.Copy(dny, Vsednidny, Vsednidny.Length);
+
+            foreach (string den in Vsednidny)
+            {
+                Console.WriteLine(den);
+            }
+            Console.ReadLine();
+        }
+
+        // Vytvořte program který vygeneruje n čísel
+        // Dále nabídne možnosti
+        // 1. Vypsat v původním pořadí
+        // 2. Seřazeno vzestupně
+        // 3. Seřazeno sestupně
+        // 4. Konec
+        // Pro řazení si vytvoříme nové pole, kde nakopírujeme hodnoty z původního pole
+
+        public static void KopirkaProRazeni()
+        {
+            Random random = new Random();
+            Console.WriteLine("Zadej počet generovaných čísel: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] Pole = new int[n];
+
+            for (int i = 0; i < n; i++)
+                Pole[i] = random.Next();
+
+            foreach (int i in Pole)
+            {
+                Console.WriteLine(i);
+            }
+
+            int[] Zaloha = new int[n];
+            Array.Copy(Pole, Zaloha, Zaloha.Length);
+
+            while (true)
+            {
+                Console.WriteLine("1. Původní pořadí, 2. Výpis seřazený vzestupně, 3. Výpis seřazený sestupně, 4. Konec");
+                int odpoved = int.Parse(Console.ReadLine());
+
+                if (odpoved == 1)
+                {
+                    foreach (int i in Pole)
+                        Console.WriteLine(i);
+                }
+                else if (odpoved == 2)
+                {
+                    Array.Sort(Zaloha);
+                    Console.WriteLine("\n\nSeřazené pole vzestupně");
+                    foreach (int i in Zaloha)
+                        Console.WriteLine(i);
+                }
+                else if (odpoved == 3)
+                {
+                    Array.Sort(Zaloha);
+                    Array.Reverse(Zaloha);
+                    Console.WriteLine("\n\nSeřazené pole vzestupně");
+                    foreach (int i in Zaloha)
+                    {
+                        Console.WriteLine(i);
+                    }
+                    Console.ReadLine();
+                }
+                else if (odpoved == 4)
+                {
+                    break;
+                }
+            }
+        }
     }
 }
