@@ -229,7 +229,141 @@ namespace CSharp_ve_skole
             Console.ReadLine();
         }
 
-        // Program vzgeneruje 
+        // Program vzgeneruje N čísel do pole, poté zobrazí volbu
+        // 1. Výpis seřazený vzestupně
+        // 2. Výpis seřazený sestupně
+        // 3. Nejmenší hodnota (min), Největší hodnota (max), Průměrná hodnota
+        // 4. Konec
+
+        public static void KalkulackaN()
+        {
+            Random random = new Random();
+            Console.WriteLine("Zadej počet generovaných čísel: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] Pole = new int[n];
+
+            for (int i = 0; i < n; i++)
+                Pole[i] = random.Next();
+
+            foreach (int i in Pole)
+                Console.WriteLine(i);
+            Console.WriteLine("1. Výpis seřazený vzestupně, 2. Výpis seřazený sestupně, 3. Nejmenší hodnota (min), Největší hodnota (max), Průměrná hodnota, 4. Konec");
+            int odpoved = int.Parse(Console.ReadLine());
+            while (true)
+            {
+                if (odpoved == 1)
+                {
+                    Array.Sort(Pole);
+                    Console.WriteLine("\n\nSeřazené pole vzestupně");
+                    foreach (int i in Pole) Console.WriteLine(i);
+                }
+                else if (odpoved == 2)
+                {
+                    Console.WriteLine("\n\nSeřazené pole vzestupně");
+                    Array.Sort(Pole);
+                    Array.Reverse(Pole);
+                    foreach (int i in Pole)
+                    {
+                        Console.WriteLine(i);
+                    }
+                    Console.ReadLine();
+                }
+                else if (odpoved == 3)
+                {
+                    Console.WriteLine("Minimální hodnota je {0}", Pole.Min());
+                    Console.WriteLine("Maximální hodnota je {0}", Pole.Max());
+                    Console.WriteLine("Průměrná hodnota je {0}", Pole.Average());
+                    Console.ReadLine();
+                }
+                else if (odpoved == 4)
+                {
+                    break;
+                }
+            }
+        }
+
+        // Program vzgeneruje N čísel do pole, poté zobrazí volbu
+        // 1. Výpis seřazený vzestupně
+        // 2. Výpis seřazený sestupně
+        // 3. Nejmenší hodnota (min), Největší hodnota (max), Průměrná hodnota
+        // 4. Nadprůměrné hodnoty
+        // 5. Vygenerování nových hodnot
+        // 6. Konec
+
+        public static void KalkulackaN2()
+        {
+            Random random = new Random();
+            Console.WriteLine("Zadej počet generovaných čísel: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] Pole = new int[n];
+
+            for (int i = 0; i < n; i++)
+                Pole[i] = random.Next();
+
+            foreach (int i in Pole)
+                Console.WriteLine(i);
+            
+
+            while (true)
+            {
+                Console.WriteLine("1. Výpis seřazený vzestupně, 2. Výpis seřazený sestupně, 3. Nejmenší hodnota (min), Největší hodnota (max), Průměrná hodnota, 4. Nadprůměrné hodnoty, 5. Vygenerování nových hodnot, 6. Konec");
+                string odpoved = Console.ReadLine();
+                if (odpoved == "1")
+                {
+                    Array.Sort(Pole);
+                    Console.WriteLine("\n\nSeřazené pole vzestupně");
+                    foreach (int i in Pole) Console.WriteLine(i);
+                }
+                else if (odpoved == "2")
+                {
+                    Console.WriteLine("\n\nSeřazené pole vzestupně");
+                    Array.Sort(Pole);
+                    Array.Reverse(Pole);
+                    foreach (int i in Pole)
+                    {
+                        Console.WriteLine(i);
+                    }
+                    Console.ReadLine();
+                }
+                else if (odpoved == "3")
+                {
+                    Console.WriteLine("Minimální hodnota je {0}", Pole.Min());
+                    Console.WriteLine("Maximální hodnota je {0}", Pole.Max());
+                    Console.WriteLine("Průměrná hodnota je {0}", Pole.Average());
+                    Console.ReadLine();
+                }
+                else if (odpoved == "4")
+                {
+                    // 4. Nadprůměrné hodnoty
+                    Console.WriteLine("Nadprůměrné hodnoty");
+                    foreach (int i in Pole)
+                    {
+                        if (i > Pole.Average())
+                            Console.WriteLine(i);
+                    }
+                    Console.ReadLine();
+
+                }
+                else if (odpoved == "5")
+                {
+                    // 5. Vygenerování nových hodnot
+                    Console.WriteLine("Zadej počet generovaných čísel: ");
+                    n = int.Parse(Console.ReadLine());
+                    Pole = new int[n];
+
+                    for (int i = 0; i < n; i++)
+                        Pole[i] = random.Next();
+
+                    foreach (int i in Pole)
+                        Console.WriteLine(i);
+                    Console.ReadLine();
+                }
+                else if (odpoved == "6")
+                {
+                    break;
+                }
+            }
+        }
 
     }
 }
