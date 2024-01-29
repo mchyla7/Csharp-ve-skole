@@ -218,6 +218,18 @@ namespace CSharp_ve_skole
             Console.WriteLine("\n\nSeřazené pole vzestupně");
             foreach (int i in Pole)
             Console.WriteLine(i);
+            
+            // Seřazené pole sestupně
+            Console.WriteLine("\n\nSeřazené pole vzestupně");
+            Array.Reverse(Pole); // Prvky pole se seřadí opačně
+            foreach (int i in Pole)
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine();
         }
+
+        // Program vzgeneruje 
+
     }
 }
