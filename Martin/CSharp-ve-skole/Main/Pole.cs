@@ -443,6 +443,84 @@ namespace CSharp_ve_skole
             }
         }
     
-    
+        // Metoda pole.Contains(hledaný prvek)
+        // Vrací true pokud pole obsahuje hledaný prvek
+        // Jinak vratí false
+
+        public static void HledamSignal()
+        {
+            double[] mnozina = { 1, 2, 35, 36, 100, 101 };
+
+            Console.WriteLine("Zadejte číslo: ");
+            double cislo = double.Parse(Console.ReadLine());
+
+            if (mnozina.Contains(cislo)) //vrati true pokud pole obsahuje číslo
+                Console.WriteLine("Patří do zvolené množiny");
+            else
+                Console.WriteLine("Nepatří do zvolené množiny");
+            Console.ReadLine();
+         }   
+        
+        // Podle názvu měsíce zjístí program zda jde o první nebo o druhé pololetí
+        // Poté se zeptá zda má pokračovat
+
+        public static void Pololoetky()  // Nefunguje :(
+        {
+            string[] prvniPololeti = { "Leden", "Únor", "Březen", "Duben", "Květen", "Červen"};
+            string[] druhePololeti = { "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"};
+
+            {
+                Console.WriteLine("Zadejte Měsíc: ");
+                string mesic = Console.ReadLine();
+
+                if (prvniPololeti.Contains(mesic))
+                {
+                    Console.WriteLine("Je to v prvním pololetí");
+                }
+                else if (druhePololeti.Contains(mesic))
+                {
+                    Console.WriteLine("Je to v druhém pololetí");
+                }
+                else
+                {
+                    Console.WriteLine("Není to v žádném pololetí");
+                }
+
+                Console.WriteLine("Chcete pokračovat? (ano)  ");
+                string otazka = Console.ReadLine();
+            }
+        }
+
+
+        // Použití pole v podprogramech
+        // Načtění do něj a výpis z něj pomocí 2 metod
+
+        static int[] cislaPole = new int[20];
+
+        static void nacteniDoPole()
+        {
+            int dolniHranice = 1;
+            int hornihranice = 100;
+            Random random = new Random();
+            for (int i = 0; i < cislaPole.Length; i++)
+                cislaPole[i] = random.Next(dolniHranice, hornihranice + 1);
+        }
+
+        // Vytvořte program, který hpdnpty z pole cislaPole zobrazí
+
+        static void vypis()
+        {
+            Console.WriteLine("Výpis pole: ");
+            for (int i = 0; i < cislaPole.Length; i++)
+                Console.WriteLine(cislaPole[i]);
+            Console.WriteLine();
+        }
+
+        public static void poleHlavni()
+        {
+            nacteniDoPole();
+            vypis();
+            Console.ReadLine();
+        }
     }
 }
