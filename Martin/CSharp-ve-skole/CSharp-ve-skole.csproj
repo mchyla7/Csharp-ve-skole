@@ -46,9 +46,12 @@
     <Compile Include="Main\Cykly.cs" />
     <Compile Include="Main\MathC.cs" />
     <Compile Include="Main\Metody.cs" />
+    <Compile Include="Main\MetodyTextu.cs" />
     <Compile Include="Main\Opakovani.cs" />
     <Compile Include="Main\Podminky.cs" />
     <Compile Include="Main\Pole.cs" />
+    <Compile Include="Main\PracesTextem.cs" />
+    <Compile Include="Main\Procvicovani-Pole.cs" />
     <Compile Include="Main\UvodC.cs" />
     <Compile Include="Main\Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

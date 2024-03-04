@@ -18,12 +18,16 @@ namespace CSharp_ve_skole.Main
         Console.ReadLine();
         }
 
-        public static void Vypis2()
+        public static void Vypisy()
         {
             Console.Write("Zadejte text: ");
-            string text = Console.ReadLine(); 
-            for (int i = 0; i < text.lenght; i++)
-                    Console.WriteLine(text[i]);
+            string text = Console.ReadLine();
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                Console.WriteLine(text[i]);
+            }
+
         Console.ReadLine();
         }
 
@@ -36,7 +40,7 @@ namespace CSharp_ve_skole.Main
         {
             Console.Write("Zadejte text: ");
             string text = Console.ReadLine();
-            for (int i = 0; i < text.Lenght(); i++)
+            for (int i = 0; i < text.Length; i++)
                 Console.WriteLine(text[i] + " ");
             Console.ReadLine();
         }
@@ -123,7 +127,74 @@ namespace CSharp_ve_skole.Main
             Console.ReadLine();
         }
 
+        // Program načte text
+        // Následně jej zobrazí tak, že mezi každým znakem bude znak "*"
+        // Vstup "abc"
+        // Výstup "a*b*c"
+
+        public static void Hvezdicka()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                Console.Write(text[i]);
+                if (i < text.Length - 1)
+                {
+                    Console.Write("*");
+                }    
+            }
+            Console.WriteLine();
+        }
+
+        // Program načte text
+        // Následně zobrazí tak, že před každým znakem bude jeho pořadové číslo
+        // Vstup "abc"
+        // Výstup "1.a 2.b 3.c"
+
+        public static void Ciselka()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                Console.Write("{0}.{1} ", i + 1, text[i]);
+            }
+
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+
+        // Program načte text
+        // Následně jej zobrazí tak, že budou 3 znaky na řádku
+        // Vstup: "abcdefg"
+        // Výstup: "abc"
+        //         "def"
+        //         "g"
+
+        public static void TriZnak()
+        {
+            string text2 = "";
+            int novyRadek = 0;
+
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+            for (int i = 0; i < text.Length; i++)
+            {
+                text2 += text[i];
+                novyRadek++;
+                if (novyRadek == 3)
+                {
+                    text2 += "/n";
+                    novyRadek = 0;
+                }
+            }
+            Console.Write(text2);
+            Console.ReadLine();
+        }
+
 
     }
-
 }
