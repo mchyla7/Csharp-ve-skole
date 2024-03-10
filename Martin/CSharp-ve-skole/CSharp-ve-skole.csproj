@@ -50,13 +50,32 @@
     <Compile Include="Main\Opakovani.cs" />
     <Compile Include="Main\Podminky.cs" />
     <Compile Include="Main\Pole.cs" />
-    <Compile Include="Main\PracesTextem.cs" />
+    <Compile Include="Main\PracesTextem.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Main\Procvicovani-Pole.cs" />
     <Compile Include="Main\UvodC.cs" />
     <Compile Include="Main\Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testing\Chyla.05.02.cs" />
     <Compile Include="Testing\Chyla.06.11.cs" />
     <Compile Include="Testing\Chyla.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CSharp-ve-skole.exe" />
+    <Content Include="bin\Debug\CSharp-ve-skole.pdb" />
+    <Content Include="bin\Debug\CSharp-ve-skole.vshost.exe" />
+    <Content Include="obj\x86\Debug\CSharp-ve-skole.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\CSharp-ve-skole.exe" />
+    <Content Include="obj\x86\Debug\CSharp-ve-skole.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\CSharp-ve-skole.vshost.exe.manifest" />
+    <None Include="obj\x86\Debug\CSharp-ve-skole.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\x86\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

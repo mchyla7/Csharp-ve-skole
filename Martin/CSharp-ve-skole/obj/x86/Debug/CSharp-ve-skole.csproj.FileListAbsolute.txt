@@ -13,3 +13,6 @@ C:\Users\martin.chyla2\Desktop\C#\CSharp-ve-skole\Martin\CSharp-ve-skole\bin\Deb
 C:\Users\martin.chyla2\Desktop\C#\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.csprojResolveAssemblyReference.cache
 C:\Users\mchyl\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.exe
 C:\Users\mchyl\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.pdb
+C:\Users\mchyl\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\bin\Debug\CSharp-ve-skole.exe
+C:\Users\mchyl\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\bin\Debug\CSharp-ve-skole.pdb
+C:\Users\mchyl\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.csprojResolveAssemblyReference.cache

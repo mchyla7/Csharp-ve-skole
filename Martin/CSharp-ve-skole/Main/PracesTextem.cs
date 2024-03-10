@@ -195,6 +195,117 @@ namespace CSharp_ve_skole.Main
             Console.ReadLine();
         }
 
+        // Směs příkladů
 
+        public static void Vse()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+
+            while (true)
+            {
+                Console.WriteLine("1. Text Podsebou, 2. Počet znaků, Počet mezer, První a poslední znak, 3. Počet hledaného znaku, 4. Číslování znaků, 5. Tři Znaky na řádku, 6. Konec");
+                string otazka = Console.ReadLine();
+
+                if (otazka == "1")
+                {
+                    for (int i = 0; i < text.Length; i++)
+                    {
+                        Console.WriteLine(text[i]);
+                    }
+
+                    Console.ReadLine();
+
+                }
+
+                else if (otazka == "2")
+                {
+                    int pocetZnaku = text.Length;
+                    int pocetMezer = 0;
+
+                    foreach (char znak in text)
+                    {
+                        if (znak == ' ')
+                        {
+                            pocetMezer++;
+                        }
+                    }
+
+                    char prvniZnak = text[0];
+                    char posledniZnak = text[text.Length - 1];
+
+                    Console.WriteLine("Počet znaků: ", pocetZnaku);
+                    Console.WriteLine("Počet mezer: ", pocetMezer);
+                    Console.WriteLine("První znak: ", prvniZnak);
+                    Console.WriteLine("Poslední znak: ", posledniZnak);
+
+                    Console.ReadLine();
+
+                }
+
+                else if (otazka == "3")
+                {
+                    Console.WriteLine("Zadej hledaný znak");
+                    char znak = Console.ReadKey().KeyChar;
+                    int pocet = 0; int pozice = 0; string poziceTisk = "";
+
+                    foreach (char z in text)
+                    {
+                        if (z == znak)
+                        {
+                            pocet++;
+                            poziceTisk += pozice + ";";
+                        }
+                        pozice++;
+                    }
+
+                    Console.WriteLine("\nPočet znaků , v textu: {0}", pocet);
+
+                    if (poziceTisk != "")
+                    {
+                        Console.WriteLine(poziceTisk);
+                    }
+
+                    Console.ReadLine();
+                }
+
+                else if (otazka == "4")
+                {
+                    for (int i = 0; i < text.Length; i++)
+                    {
+                        Console.Write("{0}.{1} ", i + 1, text[i]);
+                    }
+
+                    Console.WriteLine();
+                    Console.ReadLine();
+                }
+
+                else if (otazka == "5")
+                {
+                    string text2 = "";
+                    int novyRadek = 0;
+
+                    for (int i = 0; i < text.Length; i++)
+                    {
+                        text2 += text[i];
+                        novyRadek++;
+                        if (novyRadek == 3)
+                        {
+                            text2 += "/n";
+                            novyRadek = 0;
+                        }
+                    }
+                    Console.Write(text2);
+                    Console.ReadLine();
+                }
+
+                else if (otazka == "6")
+                {
+                    break;
+                }
+            }
+        }
+
+        //done
     }
 }
