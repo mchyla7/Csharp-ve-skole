@@ -115,5 +115,36 @@ namespace CSharp_ve_skole.Main
             
         }
 
+        // Program načte text
+        // Vrátí první a poslední znak, místo ostatních znaků vloží "*"
+        // Znaky převede na malé písmena
+        // Vstup: "ABCD"
+        // Výstup "a**d"
+
+        public static void metoda()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+            string prvni = text[0].ToString();
+            string posledni = text[text.Length - 1].ToString();
+            int pocetHvezd = text.Length - 2;
+            string hvezdy = "";
+
+            for (int i = 1; i <= pocetHvezd; i++)
+            {
+                hvezdy += "*";
+            }
+
+            Console.WriteLine((prvni + pocetHvezd + posledni).ToLower());
+            Console.ReadLine();
+        }
+ 
+        // Program testuje zda zadaný text je mailova adresa
+        // Podmínka: obsahuje @ a zároveň jim nezačíná ani nekončí
+        // Program zobrazí: "V pořádku" nebo "Chyba"
+
+        // Containd("@")
+        // StartsWith("@")
+        // EndsWith("@")
     }
 }

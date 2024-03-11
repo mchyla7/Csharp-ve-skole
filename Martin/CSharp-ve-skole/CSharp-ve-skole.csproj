@@ -73,6 +73,7 @@
     <None Include="bin\Debug\CSharp-ve-skole.vshost.exe.manifest" />
     <None Include="obj\x86\Debug\CSharp-ve-skole.csprojResolveAssemblyReference.cache" />
     <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Compile Include="Testing\11.03.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\x86\Debug\TempPE\" />
