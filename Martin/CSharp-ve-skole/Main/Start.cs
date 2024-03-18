@@ -9,7 +9,7 @@ namespace CSharp_ve_skole
     {
         static void Main(string[] args)
         {
-            Pole.poleHlavni();
+            MetodyTextu.program();
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CSharp_ve_skole.Main
+namespace CSharp_ve_skole
 {
     class MetodyTextu
     {
@@ -146,5 +146,132 @@ namespace CSharp_ve_skole.Main
         // Containd("@")
         // StartsWith("@")
         // EndsWith("@")
+
+        public static void email()
+        {
+            Console.WriteLine("Zadejte Email: ");
+            string email = Console.ReadLine();
+            if (!email.Contains("@") || email.StartsWith("@") || email.EndsWith("@"))
+            {
+                Console.WriteLine("V emailu je chyba");
+            }
+            else
+            {
+                Console.WriteLine("Email je vpořádku");
+            }
+        }
+
+        // Program načte text
+        // Prochází znak po znaku
+        // Sudé písmeno bude velkým písmem a liché malým
+        //
+        // Vstup: ABcdeFGh
+        // Výstup: aBcDeFgH
+        // Použít:  ToUpper();
+        //          ToLower();
+
+        public static void sudoliche()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+
+            for (int i = 1; i < text.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(text[i].ToString().ToUpper());
+                }
+                else
+                {
+                    Console.WriteLine(text[i].ToString().ToLower());
+                }
+            }
+            Console.ReadLine();
+
+        }
+
+        // Program načte text
+        // a zobrazí první znak velkým, ostatní malým
+        // Vstup:    miREK
+        // Výstup:   Mirek
+
+        public static void Mirek()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+
+            text = text.ToUpper()[0] + text.ToLower().Substring(1);
+            Console.WriteLine(text);
+        }
+
+        // Program načte text
+        // Poté zobrazí volbu:
+        // 1. Poslední znak velkým
+        // 2. Všechny znaky bez posledního
+        // 3. První a poslední znak velkým, ostatní znaky malé
+        // 4. Konec
+
+        public static void program()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+            string upravenyText = "";
+
+            while (true)
+            {
+                Console.WriteLine("Zvolte operaci:");
+                Console.WriteLine("1. Poslední znak velkým");
+                Console.WriteLine("2. Všechny znaky bez posledního");
+                Console.WriteLine("3. První a poslední znak velkým, ostatní znaky malé");
+                Console.WriteLine("4. Konec");
+
+                int volba = int.Parse(Console.ReadLine());
+
+                if (volba == 1 && text.Length > 0)
+                {
+                    upravenyText = text.Substring(0, text.Length - 1) + text[text.Length - 1].ToString().ToUpper();
+                }
+                else if (volba == 2 && text.Length > 0)
+                {
+                    upravenyText = text.Substring(0, text.Length - 1);
+                }
+                else if (volba == 3)
+                {
+                    if (text.Length > 1)
+                    {
+                        upravenyText = text[0].ToString().ToUpper() + text.Substring(1, text.Length - 2).ToLower() + text[text.Length - 1].ToString().ToUpper();
+                    }
+                    else if (text.Length == 1)
+                    {
+                        upravenyText = text.ToUpper();
+                    }
+                }
+                else if (volba == 4)
+                {
+                    break;
+                }
+                if (upravenyText != "")
+                {
+                    Console.WriteLine(upravenyText);
+                }
+            }
+        }
+
+        // Program načte text
+        // Odstraní mezery před a za textem
+        // Uvnitř nahradí mezery znakem "_"
+        // Vstup:   "   a b c      "
+        // Výstup:  "a_b_c"
+
+        public static void HodneMezer()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+
+            text = text.Trim();
+            text = text.Replace(" ", "_");
+            Console.WriteLine(text);
+        }
+
     }
 }
