@@ -74,7 +74,7 @@ namespace CSharp_ve_skole
             // "ABCDED".IndexOf("D") vrátí 3
             // "ABCDED".IndexOf("D",4) vrátí 5      
 
-            Console.Read();        
+            Console.Read();
 
         }
 
@@ -112,7 +112,7 @@ namespace CSharp_ve_skole
 
             Console.WriteLine(prvniZnak + posledniZnak);
             Console.ReadLine();
-            
+
         }
 
         // Program načte text
@@ -138,7 +138,7 @@ namespace CSharp_ve_skole
             Console.WriteLine((prvni + pocetHvezd + posledni).ToLower());
             Console.ReadLine();
         }
- 
+
         // Program testuje zda zadaný text je mailova adresa
         // Podmínka: obsahuje @ a zároveň jim nezačíná ani nekončí
         // Program zobrazí: "V pořádku" nebo "Chyba"
@@ -273,5 +273,130 @@ namespace CSharp_ve_skole
             Console.WriteLine(text);
         }
 
+        // Vytvořte program který načte text
+        // Odstraní mezery před a za textem
+        // Pokud text obsahuje " " pak vrátí text před mezerou a na dalším řádku za mezerou
+        // Pokud neobsahuje " ", pak to oznámí
+
+        // text.Contains(" ") vrátí true pokud text obsahuje mezeru
+        // Vstup     "    abc cde      "
+        // Výstup    "abc"
+        //           "cde"
+
+
+        static void Containsss()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+
+            string bezmezertext = text.Trim();
+
+            if (!bezmezertext.Contains(" "))
+            {
+                Console.WriteLine("Text neobsahuje mezeru.");
+                return;
+            }
+            else
+            {
+                Console.WriteLine(bezmezertext.Substring(0, bezmezertext.IndexOf(" ")));
+                Console.Write(bezmezertext.Substring(bezmezertext.IndexOf(" ") + 1));
+            }
+            Console.Read();
+        }
+
+        // Načte emailovu adresu petr.novake@cez.cz
+        // Vypíše jméno
+
+        public static void email()
+        {
+            Console.WriteLine("Zadejte emailovu adresu: ");
+            string text = Console.ReadLine();
+            string jmeno = text.Substring(text.IndexOf(".") + 1);
+
+            Console.Write(jmeno);
+            Console.ReadLine();
+        }
+
+        // Načte emailovu adresu petr.novake@cez.cz
+        // Pokud adresa obsahuje znak "." a zároveň tímto znakem nezačíná, potom program vypíše text před tečkou
+
+        public static void emailyy()
+        {
+            Console.WriteLine("Zadejte email: ");
+            string email = Console.ReadLine();
+
+            if (email.IndexOf(".") > 0)
+            {
+                string jmeno = email.Substring(0, email.IndexOf("."));
+            }
+            else
+            {
+                Console.WriteLine("Emailová adresa neobsahuje tečku.");
+            }
+
+            Console.ReadLine();
+        }
+
+        // Program načte emailovou adresu
+        // Pokud adresa obsahuje znak "." a zároveň znakem nezačíná, dále text obsahuje @ a "." je před @
+        // Metoda vypíše text před tečkou
+
+        public static void wtf()
+        {
+            Console.WriteLine("Zadejte email: ");
+            string text = Console.ReadLine();
+
+            if (text.IndexOf(".") > 0 && text.IndexOf("@")>text.IndexOf("."))
+            {
+                string jmeno = text.Substring(0, text.IndexOf("."));
+            }
+            else
+            {
+                Console.WriteLine("Emailová adresa neobsahuje tečku.");
+            }
+
+            Console.ReadLine();
+        }
+
+        // Vypište příjmení
+
+        public static void prijmeni()
+        {
+            Console.WriteLine("Zadejte email: ");
+            string text = Console.ReadLine();
+
+            Console.WriteLine(text.Substring(text.IndexOf("."), text.IndexOf("@")));
+            Console.ReadLine();
+        }
+
+        // Program načte text a ykontroluje jestli tam jsou české znaky
+        // "ěščřžýáíé"
+
+        public static void czech()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+            string ceskeZnaky = "ěščřžýáíé";
+
+            int obsahuje = 0;
+
+            foreach (char znak in text)
+            {
+                if (ceskeZnaky.IndexOf(znak) >= 0)
+                {
+                    obsahuje++;
+                    break;
+                }
+            }
+
+            if (obsahuje > 0)
+            {
+                Console.WriteLine("Text obsahuje české znaky.");
+            }
+            else
+            {
+                Console.WriteLine("Text neobsahuje české znaky.");
+            }
+        }
     }
 }
