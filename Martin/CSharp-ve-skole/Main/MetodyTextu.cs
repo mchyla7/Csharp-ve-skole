@@ -307,7 +307,7 @@ namespace CSharp_ve_skole
         // Načte emailovu adresu petr.novake@cez.cz
         // Vypíše jméno
 
-        public static void email()
+        public static void mail()
         {
             Console.WriteLine("Zadejte emailovu adresu: ");
             string text = Console.ReadLine();
@@ -369,7 +369,7 @@ namespace CSharp_ve_skole
             Console.ReadLine();
         }
 
-        // Program načte text a ykontroluje jestli tam jsou české znaky
+        // Program načte text a zkontroluje jestli tam jsou české znaky
         // "ěščřžýáíé"
 
         public static void czech()
@@ -397,6 +397,83 @@ namespace CSharp_ve_skole
             {
                 Console.WriteLine("Text neobsahuje české znaky.");
             }
+     
+        }
+    
+        // Program načte text, nahradí diakritiku
+        // Vstup: "řešeto"
+        // Výstup: "reseto"
+
+        public static void cestina()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+            string cznaky = "ěščřžýáíéňďťúůĚŠČŘŽÝÁÍÉŇĎŤÚŮ";  // ĚŠČŘŽÝÁÍÉŇĎŤÚŮ
+            string aznaky = "escrzyaiendtuuESCRZYAIENDTUU";   // ESCRZYAIENDTUU
+
+            for (int i = 0; i < cznaky.Length; i++)
+            {
+                text = text.Replace(cznaky[i], aznaky[i]);
+            }
+
+            Console.WriteLine(text);
+            Console.ReadLine();
+
+        }
+
+        // char.IsUpper(znak) vrací true pokued je znak velké písmeno
+
+        // Program načte text a zobrazí počet velkých písmen v textu
+        // Zobrazí počet malých a velkých písmen
+
+        public static void PocetVelkychPismen()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+            int pocetVelkych = 0; 
+            int pocetMalych = 0; 
+
+            foreach (char znak in text)
+            {
+                if (char.IsUpper(znak) == true)
+                {
+                    pocetVelkych++;
+                }
+                else if (char.IsLower(znak) == true)
+                {
+                    pocetMalych++;
+                }
+        
+            }
+
+            Console.WriteLine("Malých znaků je {0} a velkých je {1}", pocetMalych, pocetVelkych);
+            Console.ReadLine();
+        }
+
+        // Program převede velká písmena na malá a malá na velká
+        // Vstup: "ABC12cba"
+        // Výstup: "abc123CBA"
+
+        public static void VelkeNaMalaMalaNaVelka()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+            string vystup = "";
+            
+            foreach (char znak in text)
+            {
+                if (char.IsUpper(znak))
+                {
+                    vystup += znak.ToString().ToLower();
+                }
+                else
+                {
+                    vystup += znak.ToString().ToUpper();
+                }
+            }
+
+            Console.WriteLine(vystup);
+            Console.ReadLine();
         }
     }
 }

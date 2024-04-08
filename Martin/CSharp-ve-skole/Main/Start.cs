@@ -9,7 +9,7 @@ namespace CSharp_ve_skole
     {
         static void Main(string[] args)
         {
-            MetodyTextu.program();
+            MetodyTextu.VelkeNaMalaMalaNaVelka();
         }
     }
 }
