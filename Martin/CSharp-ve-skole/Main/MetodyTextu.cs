@@ -452,7 +452,7 @@ namespace CSharp_ve_skole
 
         // Program převede velká písmena na malá a malá na velká
         // Vstup: "ABC12cba"
-        // Výstup: "abc123CBA"
+        // Výstup: "abc12CBA"
 
         public static void VelkeNaMalaMalaNaVelka()
         {
@@ -475,5 +475,46 @@ namespace CSharp_ve_skole
             Console.WriteLine(vystup);
             Console.ReadLine();
         }
+
+        // Směs všech příkladů
+
+        public static void Vse()
+        {
+            Console.WriteLine("Zadejte text: ");
+            string text = Console.ReadLine();
+            while (true)
+            {
+                Console.WriteLine("1. Odstraní mezery před a za textem, nahradí mezery znakem _, 2. Věk/nPříjmení/nJméno, 3. Konec");
+                string otazka = Console.ReadLine();
+                if (otazka == "1")
+                {
+                    Console.WriteLine(text);
+                    text = text.Trim();
+                    text = text.Replace(" ", "_");
+                    Console.WriteLine(text);
+                }
+                if (otazka == "2")
+                {
+                    int prvnicarka = text.IndexOf(',');
+                    int druhacarka = text.IndexOf(',', prvnicarka + 1); 
+                    string jmeno = text.Substring(0, prvnicarka);
+                    string prijmeni = text.Substring(prvnicarka + 1, druhacarka - prvnicarka - 1);
+                    string vek = text.Substring(druhacarka + 1);
+                    int vek2 = int.Parse(vek);
+
+                    Console.WriteLine(vek2);
+                    Console.WriteLine(prijmeni.ToUpper()[0] + prijmeni.Substring(1).ToLower());
+                    Console.WriteLine(jmeno);
+                }
+                if (otazka == "3")
+                {
+                    break;
+                }
+
+            }
+
+        }
+
+        // done
     }
 }
