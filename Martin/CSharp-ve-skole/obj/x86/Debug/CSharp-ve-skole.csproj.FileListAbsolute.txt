@@ -16,3 +16,8 @@ C:\Users\mchyl\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSha
 C:\Users\mchyl\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\bin\Debug\CSharp-ve-skole.exe
 C:\Users\mchyl\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\bin\Debug\CSharp-ve-skole.pdb
 C:\Users\mchyl\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.csprojResolveAssemblyReference.cache
+C:\Users\martin.chyla2\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.exe
+C:\Users\martin.chyla2\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.pdb
+C:\Users\martin.chyla2\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\obj\x86\Debug\CSharp-ve-skole.csprojResolveAssemblyReference.cache
+C:\Users\martin.chyla2\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\bin\Debug\CSharp-ve-skole.exe
+C:\Users\martin.chyla2\Desktop\CSharp-ve-skole\Martin\CSharp-ve-skole\bin\Debug\CSharp-ve-skole.pdb

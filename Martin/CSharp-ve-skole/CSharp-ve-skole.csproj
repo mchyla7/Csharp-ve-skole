@@ -50,6 +50,7 @@
     <Compile Include="Main\Opakovani.cs" />
     <Compile Include="Main\Podminky.cs" />
     <Compile Include="Main\Pole.cs" />
+    <Compile Include="Main\PraceSeSoubory.cs" />
     <Compile Include="Main\PracesTextem.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -65,6 +66,7 @@
     <Content Include="bin\Debug\CSharp-ve-skole.exe" />
     <Content Include="bin\Debug\CSharp-ve-skole.pdb" />
     <Content Include="bin\Debug\CSharp-ve-skole.vshost.exe" />
+    <Content Include="Main\Vedlejší soubory\text.txt" />
     <Content Include="obj\x86\Debug\CSharp-ve-skole.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\CSharp-ve-skole.exe" />
     <Content Include="obj\x86\Debug\CSharp-ve-skole.pdb" />
