@@ -66,6 +66,7 @@
     <Content Include="bin\Debug\CSharp-ve-skole.exe" />
     <Content Include="bin\Debug\CSharp-ve-skole.pdb" />
     <Content Include="bin\Debug\CSharp-ve-skole.vshost.exe" />
+    <Content Include="Main\Vedlejší soubory\cisla.txt" />
     <Content Include="Main\Vedlejší soubory\text.txt" />
     <Content Include="obj\x86\Debug\CSharp-ve-skole.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\CSharp-ve-skole.exe" />
