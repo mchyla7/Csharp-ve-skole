@@ -158,6 +158,8 @@ namespace CSharp_ve_skole
             double cislo;
             int i = 0;
             double[] negativni = new Double[cisla.Length];
+            double suma = 0;
+            double pocet = 0;
 
             foreach (string radek in soubor)
             {
@@ -175,11 +177,45 @@ namespace CSharp_ve_skole
                 if (hodnota < 0)
                 {
                     Console.WriteLine("{0} ", hodnota);
+                    suma = +hodnota;
+                    pocet++;
+
                 }
             }
+            Console.WriteLine("Průměr ", suma / pocet);
             Console.ReadLine();
         }
 
+        // Data: text cislo
+        // Program zobrazí hodnoty z druhého sloupce
+        // Pokud tabulka obsahuje v druhém sloupci nečíselnou hodnotu, program to oznámí a ukončí
+        // Program zobrazí součet čísel a maximum z číselných hodnot
 
+        public static void TextCislo()
+        {
+            string cesta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\CSharp-ve-skole\\Martin\\CSharp-ve-skole\\Main\\Vedlejší soubory\\Tabulka.txt";
+            string[] soubor = File.ReadAllLines(cesta);
+            double soucet = 0;
+            double max = double.MinValue;
+            double cislo;
+
+            foreach (string radek in soubor)
+            {
+                if (!double.TryParse(radek.Substring(radek.IndexOf(' ')+1), out cislo))
+                {
+                    Console.Write("Chyba v datech!");
+                    Console.ReadLine() ;
+                    return;
+                }
+                Console.WriteLine(cislo);
+                if (cislo > max)
+                {
+                    max = cislo;
+                }
+            }
+            Console.WriteLine("\nSoučet " + soucet);
+            Console.WriteLine("\nMaximum " + max);
+            Console.ReadLine();
+        }
     }
 }
