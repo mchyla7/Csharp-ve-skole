@@ -11,7 +11,7 @@ namespace CSharp_ve_skole
         public static void CteniZeSouboru()
         {
             string cesta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\CSharp-ve-skole\\Martin\\CSharp-ve-skole\\Main\\Vedlejší soubory\\text.txt";
-            // string dokumenty = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Test\\text.txt";
+            // string dokumenty = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\text.txt";
 
             string t = File.ReadAllText(cesta);
 
@@ -147,42 +147,35 @@ namespace CSharp_ve_skole
             Console.ReadLine();
         }
 
-        // V souboru jsou uložená čísla, na každém řádku je číslo
-        // Program zobrazí záporné hodnoty a seřadí je sestupně
+        // Data: text cislo
+        // Program zobrazí hodnoty z druhého sloupce
+        // Pokud tabulka obsahuje v druhém sloupci nečíselnou hodnotu, program to oznámí a ukončí
+        // Program zobrazí součet čísel a maximum z číselných hodnot
 
-        public static void NegativniCisla()
+        public static void TextCislo()
         {
-            string cesta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\CSharp-ve-skole\\Martin\\CSharp-ve-skole\\Main\\Vedlejší soubory\\cisla.txt";
+            string cesta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\CSharp-ve-skole\\Martin\\CSharp-ve-skole\\Main\\Vedlejší soubory\\Tabulka.txt";
             string[] soubor = File.ReadAllLines(cesta);
-            double[] cisla = new Double[soubor.Length];
+            double soucet = 0;
+            double max = double.MinValue;
             double cislo;
-            int i = 0;
-            double[] negativni = new Double[cisla.Length];
-            double suma = 0;
-            double pocet = 0;
 
             foreach (string radek in soubor)
             {
-                if (double.TryParse(radek, out cislo))
+                if (!double.TryParse(radek.Substring(radek.IndexOf(' ') + 1), out cislo))
                 {
-                    cisla[i] = cislo;
-                    i++;
+                    Console.Write("Chyba v datech!");
+                    Console.ReadLine();
+                    return;
+                }
+                Console.WriteLine(cislo);
+                if (cislo > max)
+                {
+                    max = cislo;
                 }
             }
-
-            Array.Sort(cisla);
-            Array.Reverse(cisla);
-            foreach (double hodnota in cisla)
-            {
-                if (hodnota < 0)
-                {
-                    Console.WriteLine("{0} ", hodnota);
-                    suma = +hodnota;
-                    pocet++;
-
-                }
-            }
-            Console.WriteLine("Průměr ", suma / pocet);
+            Console.WriteLine("\nSoučet " + soucet);
+            Console.WriteLine("\nMaximum " + max);
             Console.ReadLine();
         }
 
