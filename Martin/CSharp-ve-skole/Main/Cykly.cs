@@ -44,9 +44,9 @@ namespace CSharp_ve_skole
         // 
         public static void PrvniVolby()
         {
-            Console.Write("Zadej hodnotu a:");
+            Console.Write("Zadej hodnotu a: ");
             float a = float.Parse(Console.ReadLine());
-            Console.Write("Zadej hodnotu b:");
+            Console.Write("Zadej hodnotu b: ");
             float b = float.Parse(Console.ReadLine());
             while (true)
             {
